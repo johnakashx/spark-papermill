@@ -55,7 +55,7 @@ Set a single environment variable before running — `spark-papermill` detects t
 Optionally set the Spark application name:
 
 ```bash
-export SPARK_APP_NAME=my-notebook-job
+export SPARK_APP_NAME=akashx-notebook-job
 ```
 
 ---
@@ -67,6 +67,13 @@ export SPARK_APP_NAME=my-notebook-job
 ```bash
 spark-papermill INPUT OUTPUT [OPTIONS]
 ```
+
+Example 
+
+```
+SPARK_ENDPOINT_URL=local[*] spark-papermill spark-env-test2.ipynb output.ipynb -p run_id abc123  --kernel myenv
+```
+
 
 **Arguments**
 
@@ -102,7 +109,7 @@ spark-papermill analysis.ipynb output.ipynb \
 
 **Spark Connect remote server**
 ```bash
-export SPARK_ENDPOINT_URL=sc://88.208.224.248:15002
+export SPARK_ENDPOINT_URL=sc://88.208.xxx.xxx:15002
 export SPARK_APP_NAME=my-etl-job
 spark-papermill etl.ipynb output.ipynb -p warehouse cn_group_1
 ```
