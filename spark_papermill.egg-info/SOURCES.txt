@@ -1,0 +1,8 @@
+cli.py
+pyproject.toml
+spark_papermill.egg-info/PKG-INFO
+spark_papermill.egg-info/SOURCES.txt
+spark_papermill.egg-info/dependency_links.txt
+spark_papermill.egg-info/entry_points.txt
+spark_papermill.egg-info/requires.txt
+spark_papermill.egg-info/top_level.txt

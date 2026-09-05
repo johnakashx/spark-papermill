@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spark-papermill"
+version = "0.1.0"
+description = "Run Jupyter notebooks with a pre-initialized SparkSession"
+requires-python = ">=3.9"
+
+dependencies = [
+    "papermill",
+    "nbformat",
+    "pyspark>=3.4",
+]
+
+[project.optional-dependencies]
+connect = ["pyspark[connect]>=3.4"]
+
+[project.scripts]
+spark-papermill = "spark_papermill.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["spark_papermill*"]
